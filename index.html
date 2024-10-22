@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Complaint Monitoring System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #00796b;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 4px solid #004d40;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .feature {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 300px;
+        }
+        .feature h3 {
+            color: #00796b;
+        }
+        .button {
+            background: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+            }
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <?php include 'navbar.php'; ?>
+    <div class="header">
+        <h1>Welcome to the Complaint Monitoring System</h1>
+        <p>शिकायत दर्ज करने और प्रबंधन के लिए आपका वन-स्टॉप प्लेटफॉर्म</p>
+    </div>
+    <div class="container">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Easy Complaint Submission</h3>
+                <p>शिकायतों को आसानी से सबमिट करें</p>
+                <a href="submit_complaint.php" class="button">Submit Now</a>
+            </div>
+            <div class="feature">
+                <h3>View Complaints</h3>
+                <p>अपनी शिकायतों की स्थिति देखें</p>
+                <a href="view_complaints.php" class="button">View Complaints</a>
+            </div>
+            <div class="feature">
+                <h3>Admin Dashboard</h3>
+                <p>प्रशासनिक पैनल</p>
+                <a href="admin_dashboard.php" class="button">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
